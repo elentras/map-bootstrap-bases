@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title BootstrapIt
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %header.navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          = render 'shared/navbar'
+    %main{ role: 'main'}
+      .container
+        .content
+          .row
+            .span12
+              = render 'shared/messages'
+              = yield
+
+          %footer

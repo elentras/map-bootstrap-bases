@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %b Title:
+  = @article.title
+%p
+  %b Content:
+  = @article.content
+%p
+  %b User:
+  = @article.user_id
+%p
+  %b Plublished:
+  = @article.plublished
+%p
+  %b Category:
+  = @article.category_id
+= link_to 'Edit', edit_article_path(@article)
+|
+\#{link_to 'Back', articles_path}
